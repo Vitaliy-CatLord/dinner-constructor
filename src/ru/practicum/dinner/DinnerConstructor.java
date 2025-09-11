@@ -11,11 +11,11 @@ public class DinnerConstructor {
 
     //в этом методе мы добавляем компонент в подборку
     public  void addNewDish(String dishType, String dishName) {
-        ArrayList<String> dishesForType = new ArrayList<>() ; //переменая для списка блюд \\ НУЖЕН ЛИ НУЛ??
+        ArrayList<String> dishesForType ; //переменая для списка блюд
         if (dinnersByType.containsKey(dishType)) { //здесь мы должны проверить, содержит ли наше хранилище такое блюдо
             dishesForType = dinnersByType.get(dishType);//если мы уже работали с этим типом - используем существующий список
         } else {
-            dishesForType = //для нового типа блюд создаём пустой список компонентов.
+            dishesForType =new ArrayList<>();  //для нового типа блюд создаём пустой список компонентов.
                     dinnersByType.put(dishType, dishesForType); //запоминаем новый список в хранилище
         }
 
